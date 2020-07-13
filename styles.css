@@ -24,40 +24,89 @@
   box-sizing: border-box;
 }
 
+ul {
+  list-style: none;
+}
+
 body {
-  text-align: center;
+  background-color: hsl(204, 43%, 93%);
+  font-family: "Karla", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 #container {
   display: grid;
-  grid-template-columns: repeat(4fr 1fr);
-  grid-auto-rows: minmax(100px, auto);
-  max-width: 960px;
-  margin: 0 auto;
-  grid-gap: 10px;
-  grid-template-areas:
-    "header header header header"
-    "main main main main"
-    "section section section"
-    "aside aside aside aside";
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: 45%, 55%;
+  grid-template-areas: "white white" "dark light";
+  align-content: center;
+  justify-content: center;
+  width: 600px;
 }
 
-header {
-  grid-area: header;
+.join {
+  padding: 35px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: white;
+  width: 100%;
+  grid-area: white;
 }
 
-main {
-  grid-area: main;
+.monthly {
+  background-color: hsl(179, 62%, 43%);
+  border-bottom-right-radius: 5px;
+  padding: 35px 35px 20px 35px;
 }
 
-section {
-  grid-area: section;
+.why_us {
+  background-color: hsla(179, 62%, 43%, 0.692);
+  border-bottom-right-radius: 5px;
+  padding: 35px 35px 20px 35px;
 }
 
-footer {
-  grid-area: footer;
+h2 {
+  color: hsl(179, 62%, 43%);
 }
-
-ul {
-  list-style: none;
+h3 {
+  color: white;
+}
+.join > h3 {
+  margin: 15px 0;
+  color: hsl(71, 73%, 54%);
+  font-weight: 700;
+}
+.join > p {
+  color: hsl(218, 22%, 67%);
+  font-weight: 400;
+  padding: 0px 10px 0px 0px;
+  line-height: 1.7;
+}
+.box > h3 {
+  padding-bottom: 20px;
+}
+button {
+  position: absolute;
+  bottom: 30px;
+  padding: 13px;
+  border-radius: 5px;
+  width: 200px;
+  color: white;
+  background-color: hsl(71, 73%, 54%);
+  border: none;
+}
+button:hover {
+  background-color: rgb(138, 163, 24);
+  color: white;
+  cursor: pointer;
+}
+button:focus {
+  outline: none;
+}
+.box {
+  line-height: 1.4;
 }

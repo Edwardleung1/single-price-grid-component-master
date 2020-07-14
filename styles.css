@@ -32,81 +32,98 @@ body {
   background-color: hsl(204, 43%, 93%);
   font-family: "Karla", sans-serif;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  height: 100vh;
+  justify-content: center;
+  margin-top: 100px;
 }
 
 #container {
   display: grid;
-  grid-template-columns: repeat(2, 50%);
-  grid-template-rows: 45%, 55%;
-  grid-template-areas: "white white" "dark light";
-  align-content: center;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 100px;
+  width: 650px;
+  align-items: center;
   justify-content: center;
-  width: 600px;
-}
-
-.join {
-  padding: 35px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  background-color: white;
-  width: 100%;
-  grid-area: white;
-}
-
-.monthly {
-  background-color: hsl(179, 62%, 43%);
-  border-bottom-right-radius: 5px;
-  padding: 35px 35px 20px 35px;
-}
-
-.why_us {
-  background-color: hsla(179, 62%, 43%, 0.692);
-  border-bottom-right-radius: 5px;
-  padding: 35px 35px 20px 35px;
 }
 
 h2 {
   color: hsl(179, 62%, 43%);
 }
+
 h3 {
   color: white;
 }
+
+.join {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  background-color: white;
+  padding: 42px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  width: 100%;
+}
+
 .join > h3 {
   margin: 15px 0;
-  color: hsl(71, 73%, 54%);
   font-weight: 700;
 }
+
 .join > p {
   color: hsl(218, 22%, 67%);
   font-weight: 400;
   padding: 0px 10px 0px 0px;
   line-height: 1.7;
 }
-.box > h3 {
-  padding-bottom: 20px;
+
+.monthly {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 6;
+  background-color: hsl(179, 62%, 43%);
+  position: relative;
+  border-bottom-left-radius: 5px;
+  padding-top: 7em;
 }
+
+.why_us {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 6;
+  padding-top: 4em;
+  background-color: hsl(179, 62%, 50%);
+}
+
 button {
-  position: absolute;
+  background-color: hsl(71, 73%, 54%);
   bottom: 30px;
   padding: 13px;
   border-radius: 5px;
   width: 200px;
   color: white;
-  background-color: hsl(71, 73%, 54%);
   border: none;
 }
+
 button:hover {
   background-color: rgb(138, 163, 24);
   color: white;
   cursor: pointer;
 }
+
 button:focus {
   outline: none;
 }
+
 .box {
+  width: 100%;
+  color: white;
   line-height: 1.4;
+}
+
+.box li {
+  color: hsl(204, 43%, 93%);
 }

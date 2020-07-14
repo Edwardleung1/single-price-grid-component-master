@@ -81,29 +81,35 @@ h3 {
 .monthly {
   grid-column-start: 1;
   grid-column-end: 2;
-  grid-row-start: 2;
+  grid-row-start: 3;
   grid-row-end: 6;
   background-color: hsl(179, 62%, 43%);
-  position: relative;
   border-bottom-left-radius: 5px;
-  padding-top: 7em;
+  margin: 20px 0px;
+  padding: 60px 30px;
 }
 
 .why_us {
   grid-column-start: 2;
   grid-column-end: 4;
-  grid-row-start: 2;
+  grid-row-start: 3;
   grid-row-end: 6;
-  padding-top: 4em;
   background-color: hsl(179, 62%, 50%);
+  padding: 30px 35px 50px 40px;
+  border-bottom-right-radius: 5px;
+}
+
+.why_us > h3 {
+  margin-bottom: 20px;
 }
 
 button {
+  margin-top: 30px;
   background-color: hsl(71, 73%, 54%);
   bottom: 30px;
   padding: 13px;
   border-radius: 5px;
-  width: 200px;
+  width: 240px;
   color: white;
   border: none;
 }
@@ -126,4 +132,7 @@ button:focus {
 
 .box li {
   color: hsl(204, 43%, 93%);
+}
+
+@media screen and (max-width: 750px) {
 }
